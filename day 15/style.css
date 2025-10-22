@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #b2daf1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background: #088dce;
+  color: rgb(102, 246, 50);
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+
+/* Common Hover Visual Lift */
+.box:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade In Effect */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.fade-in:hover {
+  animation: fadeIn 5s ;
+}
+
+/* Fade Out Effect */
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.fade-out:hover {
+  animation: fadeOut 3s ;
+}
+
+/* Zoom In Effect */
+@keyframes zoomIn {
+  from {transform: scale(1);}
+  to {transform: scale(1.5);}
+}
+.zoom-in:hover {
+  animation: zoomIn 0.6s ;
+}
+
+/* Zoom Out Effect */
+@keyframes zoomOut {
+  from {transform: scale(1);}
+  to {transform: scale(0.5);}
+}
+.zoom-out:hover {
+  animation: zoomOut 0.6s ;
+}
+
+/* Bounce In Effect */
+@keyframes bounceIn {
+  0% {transform: scale(0.3); opacity: 0;}
+  50% {transform: scale(1.1); opacity: 1;}
+  70% {transform: scale(0.9);}
+  100% {transform: scale(1);}
+}
+.bounce-in:hover {
+  animation: bounceIn 2s ease;
+}
+
+/* Bounce Out Effect */
+@keyframes bounceOut {
+  0% {transform: scale(1); opacity: 1;}
+  30% {transform: scale(1.1);}
+  50% {transform: scale(0.9);}
+  100% {transform: scale(0.3); opacity: 0;}
+}
+.bounce-out:hover {
+  animation: bounceOut 1s ease ;
+}
