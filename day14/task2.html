@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♔ Unicode Chess Board</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f8f8f8;
+      font-family: "Segoe UI Symbol", Arial, sans-serif;
+    }
+
+    .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 70px);
+      grid-template-rows: repeat(8, 70px);
+      border: 8px solid #333;
+    }
+
+    .square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.2rem;
+      user-select: none;
+    }
+
+    .white {
+      background-color: hsl(83, 61%, 36%);
+    }
+
+    .black {
+      background-color: hsl(71, 100%, 85%);
+    }
+  </style>
+</head>
+<body>
+  <div class="chessboard">
+    <!-- Row 8 -->
+    <div class="square black">&#9820;</div><div class="square white">&#9822;</div><div class="square black">&#9821;</div><div class="square white">&#9819;</div><div class="square black">&#9818;</div><div class="square white">&#9821;</div><div class="square black">&#9822;</div><div class="square white">&#9820;</div>
+    <!-- Row 7 -->
+    <div class="square white">&#9823;</div><div class="square black">&#9823;</div><div class="square white">&#9823;</div><div class="square black">&#9823;</div><div class="square white">&#9823;</div><div class="square black">&#9823;</div><div class="square white">&#9823;</div><div class="square black">&#9823;</div>
+    <!-- Row 6 -->
+    <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+    <!-- Row 5 -->
+    <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+    <!-- Row 4 -->
+    <div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div>
+    <!-- Row 3 -->
+    <div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div><div class="square white"></div><div class="square black"></div>
+    <!-- Row 2 -->
+    <div class="square black">&#9817;</div><div class="square white">&#9817;</div><div class="square black">&#9817;</div><div class="square white">&#9817;</div><div class="square black">&#9817;</div><div class="square white">&#9817;</div><div class="square black">&#9817;</div><div class="square white">&#9817;</div>
+    <!-- Row 1 -->
+    <div class="square white">&#9814;</div><div class="square black">&#9816;</div><div class="square white">&#9815;</div><div class="square black">&#9813;</div><div class="square white">&#9812;</div><div class="square black">&#9815;</div><div class="square white">&#9816;</div><div class="square black">&#9814;</div>
+  </div>
+</body>
+</html>
