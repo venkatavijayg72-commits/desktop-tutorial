@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS  day16</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    /* 1. Move box 60px in X direction */
+    .move-box {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      transition: transform 0.4s ease;
+    }
+    .move-box:hover {
+      transform: translateX(60px);
+    }
+
+    /* 2. Rotate on hover 125 degrees */
+    .rotate-box {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      transition: transform 0.4s ease;
+    }
+    .rotate-box:hover {
+      transform: rotate(125deg);
+    }
+
+    /* 3. Scale button up by 20% smoothly */
+    .grow-btn {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background-color: mediumseagreen;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .grow-btn:hover {
+      transform: scale(1.2);
+    }
+
+    /* 4. Circle that rotates 360deg and scales down */
+    .circle-shape {
+      width: 100px;
+      height: 100px;
+      background-color: rebeccapurple;
+      border-radius: 50%;
+      transition: transform 0.4s ease;
+    }
+    .circle-shape:hover {
+      transform: rotate(360deg) scale(0.9);
+    }
+
+    /* 5. Floating animation */
+    .float-shape {
+      width: 100px;
+      height: 100px;
+      background-color: gold;
+      border-radius: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* 6. Image zoom & rotate on hover */
+    .image-hover {
+      width: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .image-hover img {
+      width: 100%;
+      transition: transform 0.4s ease;
+    }
+    .image-hover:hover img {
+      transform: scale(1.2) rotate(5deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>1. Move Box 60px →</h2>
+    <div class="move-box"></div>
+  </div>
+
+  <div>
+    <h2>2. Rotate on Hover (125°)</h2>
+    <div class="rotate-box"></div>
+  </div>
+
+  <div>
+    <h2>3. Scale Up Button</h2>
+    <button class="grow-btn">Hover Me</button>
+  </div>
+
+  <div>
+    <h2>4. Circle Rotate & Scale</h2>
+    <div class="circle-shape"></div>
+  </div>
+
+  <div>
+    <h2>5. Floating Shape</h2>
+    <div class="float-shape"></div>
+  </div>
+
+  <div>
+    <h2>6. Image Zoom & Rotate</h2>
+    <div class="image-hover">
+      <img src="bird-thumbnail.jpg" alt="Hover Effect Image">
+    </div>
+  </div>
+
+</body>
+</html>
