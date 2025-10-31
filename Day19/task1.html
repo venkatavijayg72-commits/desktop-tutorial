@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Training Tasks</title>
+  <style>
+    /* Overlapping Boxes Section */
+    .overlap-section {
+      position: relative;
+      width: 360px;
+      height: 220px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      background: #faf9f9;
+    }
+    .box {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.9;
+      box-shadow: 0 4px 10px #0002;
+      letter-spacing: 2px;
+      transition: outline 0.18s;
+    }
+    .box1 { background: #e17055; top: 16px; left: 30px; z-index: 1; }
+    .box2 { background: #00b894; top: 54px; left: 72px; z-index: 2; }
+    .box3 { background: #0984e3; top: 90px; left: 115px; z-index: 3; }
+    /* To visually test z-index swapping: activate any of the "alt-orders" by uncommenting */
+    /*
+    .box1 { z-index: 3; } .box2 { z-index: 2; } .box3 { z-index: 1; }
+    */
+
+    /* Card with Badge */
+    .card-container {
+      width: 320px;
+      margin: 40px auto 30px;
+      position: relative;
+    }
+    .card {
+      padding: 26px 17px 20px 17px;
+      border-radius: 9px;
+      box-shadow: 0 2px 10px #0002;
+      background: hsl(312, 82%, 78%);
+      font-size: 1.16rem;
+      position: relative;
+      min-height: 90px;
+    }
+    .badge {
+      position: absolute;
+      right: -14px; top: -14px;
+      background: #ff7675;
+      color: #fff;
+      font-size: 0.93em;
+      font-weight: bold;
+      padding: 7px 17px 7px 17px;
+      border-radius: 20px;
+      box-shadow: 0 2px 7px #c0392b22;
+      z-index: 4;
+      letter-spacing: 2.5px;
+    }
+
+    /* Button Styling */
+    .my-btn {
+      display: inline-block;
+      background: #6366f1;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 13px 35px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      margin: 23px auto;
+      transition: background 0.18s, box-shadow 0.18s;
+      box-shadow: 0 2px 8px #5755ec22;
+    }
+    .my-btn:hover {
+      background: hwb(227 42% 1%);
+    }
+    .my-btn:active {
+      background: hwb(247 32% 5%);
+    }
+
+    /* Highlight First Letter of p */
+    p::first-letter {
+      font-size: 195%;
+      font-weight: bold;
+      color: hsl(309, 88%, 65%);
+      font-family: serif;
+      margin-right: 4px;
+    }
+
+    /* Alternating list items & ::before icon */
+    .styled-list {
+      margin: 25px auto;
+      max-width: 320px;
+      padding: 0;
+      list-style-type: none;
+    }
+    .styled-list li {
+      padding: 13px 22px 13px 36px;
+      font-size: 1.11rem;
+      border-radius: 5px;
+      position: relative;
+      transition: background 0.12s;
+      margin-bottom: 8px;
+    }
+    /* Alternating color */
+    .styled-list li:nth-child(odd) {
+      background: #ffeaa7;
+    }
+    .styled-list li:nth-child(even) {
+      background: #dff9fb;
+    }
+    /* "👉" Before each li */
+    .styled-list li::before {
+      content: "👉";
+      position: absolute;
+      left: 8px;
+      top: 9px;
+      font-size: 1.08em;
+      color: #636e72;
+    }
+  </style>
+</head>
+<body>
+  <h2>Overlapping Boxes (Z-Index)</h2>
+  <div class="overlap-section">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+  <small>To test z-index swaps, adjust the z-index in the CSS and refresh!</small>
+
+  <h2>Card with "New" Badge</h2>
+  <div class="card-container">
+    <div class="card">
+      🎉 Welcome to our web training card.<br>
+      This card has a badge positioned using <b>absolute</b> and <b>z-index</b>!
+      <span class="badge">New</span>
+    </div>
+  </div>
+
+  <h2>Stylish Button</h2>
+  <button class="my-btn">Click Me</button>
+  <p>(Hover and hold to see color transitions on button.)</p>
+
+  <h2>Paragraph First Letter Highlight</h2>
+  <p>paragraph one: this demonstrates how the first letter stands out.</p>
+  <p>paragraph two: try adding more text for visual testing!</p>
+
+  <h2>Fancy List</h2>
+  <ul class="styled-list">
+    <li>Learn HTML CSS fundamentals</li>
+    <li>Understand z-index and stacking</li>
+    <li>Master positioning with absolute/relative</li>
+    <li>Use pseudo-elements and selectors</li>
+    <li>Create interactive buttons</li>
+  </ul>
+</body>
+</html>
